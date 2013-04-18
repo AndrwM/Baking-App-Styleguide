@@ -105,7 +105,7 @@ h1, h2 {
 	font-weight: 200;
 }
 h1 {
-	font-size: 110px;
+	font-size: 96px;
 }
 h2 {
 	font-size: 70px;
@@ -215,6 +215,35 @@ a:active {
 
 /* Input */
 
+input[type='range'] {
+    -webkit-appearance: none;
+    background: #F6F6F6;
+    border: 1px solid #e3e3e3;
+    border-radius: 2px;
+    padding: 1px;
+    -webkit-transition: all 0.2s ease;
+	-moz-transition:all 0.2s ease;
+	-o-transition: all 0.2s ease;
+	transition: all 0.2s ease;
+}
+
+input[type='range']::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background: #254A5D;
+    width: 4px;
+    height: 20px;
+}
+input[type='range']:active {
+    -webkit-appearance: none;
+    background: #76C7A5;
+    border-color: #62A689;
+}
+input[type='range']:active::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background: #fff;
+    width: 8px;
+}
+
 input[type="text"] {
 	background: #F6F6F6;
 	border: 0;
@@ -235,8 +264,13 @@ input[type="text"]::-webkit-input-placeholder {
 input[type="text"]:focus{
 	outline: 1px dashed #76c7a5;
 }
-input[type="text"].error {
+/*input[type="text"].error {
 	background: #efb968;
+	color: #fff;
+	border: 1px solid #CC943F;
+}*/
+input[type="text"].error {
+	background: #EF7E68;
 	color: #fff;
 	border: 1px solid #CC943F;
 }
